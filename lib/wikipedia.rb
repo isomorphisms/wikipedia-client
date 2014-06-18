@@ -4,7 +4,7 @@ require 'uri'
 
 module Wikipedia
   # Examples : 
-  # page = Wikipedia.find('Rails') 
+  # page = Wikipedia.find('List of sandwiches') 
   # => #<Wikipedia:0x123102>
   # page.content
   # => wiki content appears here
