@@ -26,7 +26,8 @@ module Wikipedia
   
   Configure {
     protocol  'http'
-    domain    'en.wikipedia.org'
+    language  'en'
+    domain    'wikipedia.org'
     path      'w/api.php'
   }
 
@@ -34,5 +35,28 @@ module Wikipedia
 
   def self.client
     @client ||= Wikipedia::Client.new
+  end
+
+
+
+  #Grab pages in other than English
+  class Xenophobe
+    def initialize
+      @xenophobe = 'en'
+    end
+
+    @xenophobia = {
+    :english => 'en',
+    :russian => 'ru',
+    :azerbaijani => 'az',
+    :spanish => 'es',
+    :french => 'fr',
+    :german => 'de',
+    :arabic => 'ar',
+    :chinese => 'zh',
+    :japanese => 'jp',
+    :thai => 'th'
+    }
+
   end
 end

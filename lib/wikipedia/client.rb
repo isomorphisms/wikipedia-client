@@ -1,7 +1,7 @@
 module Wikipedia
   class Client
     # see http://en.wikipedia.org/w/api.php
-    BASE_URL = ":protocol://:domain/:path?action=:action&format=json"
+    BASE_URL = ":protocol://:language.:domain/:path?action=:action&format=json"
 
     attr_accessor :follow_redirects
 
@@ -54,6 +54,7 @@ module Wikipedia
         {
           :protocol => Configuration[:protocol],
           :domain   => Configuration[:domain],
+	  :language => Configuration[:language],
           :path     => Configuration[:path]
         }
       end
