@@ -22,4 +22,32 @@ module Wikipedia
     
     directives :protocol, :language, :domain, :path
   end
+
+
+
+  #Grab pages in other than English
+  class Xenophobe
+    def initialize
+      @xenophobe = 'en'
+    end
+
+    @xenophobia = {
+    :english => 'en',
+    :russian => 'ru',
+    :azerbaijani => 'az',
+    :spanish => 'es',
+    :french => 'fr',
+    :german => 'de',
+    :arabic => 'ar',
+    :chinese => 'zh',
+    :japanese => 'jp',
+    :thai => 'th'
+    }
+
+  end
+
+
+
+
+
 end
